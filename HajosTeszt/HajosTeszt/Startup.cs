@@ -26,15 +26,22 @@ namespace HajosTeszt
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseHttpsRedirection(); //ha valaki http:// URL-t ad meg, automatikusan átirányít a biztonságos http&s://-re. Mint arról már volt szó, egy http protokollal megnyitott oldalban a böngészõ nem fog betölteni https-el hivatkozott tartalmakat.
+
+            app.UseDefaultFiles(); //innentõl pl. a http&s://cim.hu/ alatt a http&s://cim.hu/index.html oldalt szolgáltatja
+            app.UseStaticFiles(); //elérhetõvé teszi a wwwroot mappába helyezett statikus fájlokat
+            
+            // a sorrend fontos
+
             app.UseRouting();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapGet("/", async context =>
+            //    {
+            //        await context.Response.WriteAsync("Hello World!");
+            //    });
+            //});
         }
     }
 }
