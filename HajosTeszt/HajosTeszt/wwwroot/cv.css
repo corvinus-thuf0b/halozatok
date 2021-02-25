@@ -1,0 +1,25 @@
+div{border:1px solid #1E6B8C;
+margin: 70px; padding:20px; border-radius:30px; font-size:1.25em}
+
+#egesz{background-color:#EBEBEB}
+#iskola, #kep{background-color:white}
+#nev{margin:20px 450px; border: 0.5px solid black; background-color: #9FD3FF; -webkit-text-fill-color: black;
+-webkit-text-stroke-color: blue;
+-webkit-text-stroke-width: 0.5px;}
+
+hr{border: 1px dashed black}
+
+#kedvenc{background-color:#9FD3FF}
+
+span{color: grey;}
+
+h1, h2{text-align:center;}
+
+p{font-weight:bold}
+
+dd{font-style:italic}
+
+ol{list-style-type:upper-roman}
+ul{list-style-type:circle}
+
+img{display:block; margin:auto}
