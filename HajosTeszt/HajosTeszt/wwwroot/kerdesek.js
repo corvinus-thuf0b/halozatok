@@ -1,5 +1,6 @@
 ﻿var kérdés;
 var id = 1;
+var joValasz;
 
 function kérdésBetöltés(id) {
     fetch(`/questions/${id}`)
@@ -22,6 +23,7 @@ function kérdésMegjelenítés(kérdés) {
     document.getElementById("válasz2").innerHTML = kérdés.answer2;
     document.getElementById("válasz3").innerHTML = kérdés.answer3;
     document.getElementById("kép1").src = "https://szoft1.comeback.hu/hajo/" + kérdés.image;
+    joValasz = kérdés.correctAnswer;
 }
 
 
@@ -41,7 +43,6 @@ window.onload = function () {
         feher();
         id--;
         if (id == -1) return
-
         else {
             kérdésBetöltés(id);
         }
@@ -55,7 +56,7 @@ window.onload = function () {
     }
 
     document.getElementById("válasz1").onclick = () => {
-        if (kérdés.correctAnswer == 1) {
+        if (joValasz == 1) {
             document.getElementById("válasz1").style.backgroundColor = "#00ff00"
         }
         else {
@@ -64,7 +65,7 @@ window.onload = function () {
     }
 
     document.getElementById("válasz2").onclick = () => {
-        if (kérdés.correctAnswer == 2) {
+        if (joValasz == 2) {
             document.getElementById("válasz2").style.backgroundColor = "#00ff00"
         }
         else {
@@ -73,7 +74,7 @@ window.onload = function () {
     }
 
     document.getElementById("válasz3").onclick = () => {
-        if (kérdés.correctAnswer == 3) {
+        if (joValasz == 3) {
             document.getElementById("válasz3").style.backgroundColor = "#00ff00"
         }
         else {

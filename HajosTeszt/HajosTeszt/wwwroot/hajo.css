@@ -60,12 +60,12 @@ div {
     color: #2A4D6E;
 }
 
-.jó:hover {
+.jó {
     background-color: lightgreen;
     color: white;
 }
 
-.rossz:hover {
+.rossz {
     background-color: salmon;
     color: white;
 }
