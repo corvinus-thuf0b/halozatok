@@ -13,8 +13,6 @@ function init() {
         }
     }
 
-
-
     fetch("questions/count")
         .then(result => result.text())
         .then(n => { numberOfQuestions = parseInt(n) })
